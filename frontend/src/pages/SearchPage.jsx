@@ -22,14 +22,13 @@ import RecommendationBundle from '../components/RecommendationBundle';
 
 function SearchPage() {
   const [searchParams, setSearchParams] = useSearchParams();
-  const navigate = useNavigate();
   const query = searchParams.get('q') || '';
   const [searchInput, setSearchInput] = useState(query);
   const [page, setPage] = useState(1);
   const [selectedMovie, setSelectedMovie] = useState(null);
   const [showRecommendations, setShowRecommendations] = useState(false);
 
-  const { data: searchResults, isLoading, error } = useQuery({
+  const { data: searchResults } = useQuery({
     queryKey: ['search', query, page],
     queryFn: () => searchMovies(query, page),
     enabled: !!query,
@@ -45,7 +44,7 @@ function SearchPage() {
     if (searchResults?.results?.[0] && !selectedMovie) {
       setSelectedMovie(searchResults.results[0]);
     }
-  }, [searchResults]);
+  }, [searchResults, selectedMovie]);
 
   const handleSearch = (e) => {
     e.preventDefault();

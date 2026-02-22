@@ -5,10 +5,6 @@ import {
   Tabs,
   Tab,
   Box,
-  FormControl,
-  InputLabel,
-  Select,
-  MenuItem,
 } from '@mui/material';
 import { useQuery } from '@tanstack/react-query';
 import MovieGrid from '../components/MovieGrid';
