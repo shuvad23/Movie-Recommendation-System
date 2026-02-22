@@ -1,4 +1,4 @@
-scipy==1.15.1
+scipy
 fastapi
 uvicorn
 pandas
