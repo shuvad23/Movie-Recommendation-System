@@ -14,7 +14,7 @@ import {
   Divider,
 } from '@mui/material';
 import { useQuery } from '@tanstack/react-query';
-import { useSearchParams, useNavigate } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import SearchIcon from '@mui/icons-material/Search';
 import MovieGrid from '../components/MovieGrid';
 import { searchMovies, getMovieDetails } from '../api/movies';
