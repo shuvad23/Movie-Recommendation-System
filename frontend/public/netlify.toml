@@ -1,10 +1,7 @@
 [build]
-  # Command to build your app
-  command = "npm run build"
-  # Folder to publish (React build folder)
-  publish = "build"
+  command = "npm install && npm run build"
+  publish = "frontend/build"
 
-# Redirect all routes to index.html for React Router SPA
 [[redirects]]
   from = "/*"
   to = "/index.html"
